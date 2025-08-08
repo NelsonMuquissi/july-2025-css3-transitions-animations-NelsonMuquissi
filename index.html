@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 7 — CSS + JavaScript Animations</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Week 7 — Animations & Functions</h1>
+    <p class="lead">Transições CSS, @keyframes e controle via JavaScript — funções, parâmetros e retornos.</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Part 1: Transitions -->
+    <section aria-labelledby="transitions-title" class="card">
+      <h2 id="transitions-title">Part 1 — Transitions (hover / focus)</h2>
+      <p>Hover / focus em botões demonstra transições suaves.</p>
+      <div class="row">
+        <button class="btn primary" id="btnAnimateBox">Animar Caixa</button>
+        <button class="btn ghost">Ghost Button</button>
+        <button class="btn accent">Acento</button>
+      </div>
+
+      <div class="demo-area">
+        <div class="box" id="animBox" aria-hidden="false" title="Caixa animável"></div>
+      </div>
+    </section>
+
+    <!-- Part 2: Card flip -->
+    <section aria-labelledby="card-title" class="card">
+      <h2 id="card-title">Part 2 — Card Flip</h2>
+      <p>Hover ou toque para virar o cartão.</p>
+      <div class="flip-wrapper">
+        <div class="flip-card" tabindex="0" id="flipCard" aria-pressed="false">
+          <div class="flip-front">
+            <h3>Frente</h3>
+            <p>Resumo rápido</p>
+          </div>
+          <div class="flip-back">
+            <h3>Verso</h3>
+            <p>Detalhes e ação</p>
+            <button class="btn primary" id="backAction">Ação</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Part 3: Modal -->
+    <section aria-labelledby="modal-title" class="card">
+      <h2 id="modal-title">Part 3 — Modal animado</h2>
+      <p>Modal com slide + fade; fecha com botão ou ESC.</p>
+      <div class="row">
+        <button class="btn primary" id="openModal">Abrir Modal</button>
+      </div>
+    </section>
+
+    <!-- Part 4: Loader control (start/stop) -->
+    <section aria-labelledby="loader-title" class="card">
+      <h2 id="loader-title">Part 4 — Loader control (start/stop)</h2>
+      <p>Use as funções JS para iniciar/parar um loader (spinner).</p>
+      <div class="row">
+        <button class="btn primary" id="startLoader">Iniciar Loader</button>
+        <button class="btn ghost" id="stopLoader">Parar Loader</button>
+      </div>
+      <div class="loader-area" id="loaderArea" aria-live="polite"></div>
+    </section>
+
+    <!-- Part 5: Small form to show validation + animated success -->
+    <section aria-labelledby="form-title" class="card">
+      <h2 id="form-title">Part 5 — Formulário (validação simples)</h2>
+      <form id="demoForm" novalidate>
+        <label for="name">Nome</label>
+        <input id="name" type="text" placeholder="Seu nome" />
+        <small class="error" id="nameError"></small>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="seu@exemplo.com" />
+        <small class="error" id="emailError"></small>
+
+        <div class="row">
+          <button class="btn primary" type="submit">Enviar</button>
+        </div>
+
+        <div class="success" id="formSuccess" role="status" aria-live="polite">
+          Enviado com sucesso! 🎉
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Modal markup -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalLabel">
+      <h3 id="modalLabel">Modal animado</h3>
+      <p>Exemplo de modal que entra com slide + fade.</p>
+      <div class="row">
+        <button class="btn primary" id="closeModal">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <small>Projeto: Week 7 — Nelson Muquissi</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
