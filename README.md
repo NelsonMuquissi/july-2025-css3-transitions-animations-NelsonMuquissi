@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/3mJGiEKd)
 # 🎬 Assignment: Bringing Web Pages to Life with CSS & JavaScript
 
 In this assignment, you’ll create a visually dynamic and interactive experience by combining the beauty of **CSS3 animations** with the logic and power of **JavaScript functions**. By the end, you’ll have a mini interactive experience that not only looks good—but *feels* responsive and alive!
